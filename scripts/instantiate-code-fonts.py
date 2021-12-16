@@ -109,8 +109,7 @@ def splitFont(
         newFullName = (currentFullName\
             .replace("Sans", "")\
             .replace(oldName, newName + " " + fontOptions['Family Name'])\
-            .replace(" Linear Light", instance))\
-            .replace(" Regular", "")
+            .replace(" Linear Light", instance))
         setFontNameID(instanceFont, 4, newFullName)
 
         # UPDATE NAME ID 3, unique font ID
@@ -191,7 +190,7 @@ def splitFont(
         fs_selection &= 1 << 7
 
         if instance == "Italic":
-            
+
             monoFont["head"].macStyle = 0b10
             # In the OS/2 table Panose bProportion must be set to 11 for "oblique boxed" (this is partially a guess)
             monoFont["OS/2"].panose.bLetterForm = 11

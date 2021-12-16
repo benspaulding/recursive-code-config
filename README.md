@@ -1,16 +1,16 @@
 # Customize Recursive for Code
 
 ```
-#                                             /$$$$$$     /$$                  
-#                                            /$$    /    /  /             $$$  
-#    /$$$$$$$    /$$$$$$$    /$$ $$$$$    /$$$$$$$$$   /$$$$$      /$$$$$$$ /  
-#   /$$_____/   /$$____ $$  | $$$___ $$  |___ $$___/  |___ $$     /$$     $$   
-#  | $$        | $$   | $$  | $$   | $$     | $$         | $$    \  $$$$$$$    
-#  | $$        | $$   | $$  | $$   | $$     | $$         | $$     \  $$   /    
-#  \  $$$$$$$  \  $$$$$$$   | $$   | $$   /$$$$$$$$$  /$$$$$$$$$  / $$$$$$$$   
-#   \_______/   \_______/   |__/   |__/  |_________/ |_________/ | $$      $$  
-#                                                                \  $$$$$$$$   
-#                                                                 \_______/    
+#                                             /$$$$$$     /$$
+#                                            /$$    /    /  /             $$$
+#    /$$$$$$$    /$$$$$$$    /$$ $$$$$    /$$$$$$$$$   /$$$$$      /$$$$$$$ /
+#   /$$_____/   /$$____ $$  | $$$___ $$  |___ $$___/  |___ $$     /$$     $$
+#  | $$        | $$   | $$  | $$   | $$     | $$         | $$    \  $$$$$$$
+#  | $$        | $$   | $$  | $$   | $$     | $$         | $$     \  $$   /
+#  \  $$$$$$$  \  $$$$$$$   | $$   | $$   /$$$$$$$$$  /$$$$$$$$$  / $$$$$$$$
+#   \_______/   \_______/   |__/   |__/  |_________/ |_________/ | $$      $$
+#                                                                \  $$$$$$$$
+#                                                                 \_______/
 ```
 
 You can get premade Recursive fonts for Desktop, Web, & Code at https://github.com/arrowtype/recursive/releases/latest. If you are just looking for the premade fonts for code, they are also in this repo within the `fonts` folder. But, if you want to customize your own build of Recursive for Code, you can run the script in this repo!
@@ -57,7 +57,7 @@ pip install -r requirements.txt  # install dependencies
 
 This file uses YAML. Hopefully, it is fairly self-explanatory. If not, file an issue and someone will hopefully help out!
 
-First, specify the family name you want (e.g. `Rec Mono Custom`). 
+First, specify the family name you want (e.g. `Rec Mono Custom`).
 
 Then, specify axis values you want for Regular, Italic, Bold, & Bold Italic fonts.
 
@@ -102,7 +102,9 @@ It will build & output fonts to a folder like `RecMono-Custom` (this is affected
 If you wish to build fonts with premade configurations (or reference these), just add their path as an argument:
 
 ```bash
-python3 scripts/instantiate-code-fonts.py premade-configs/duotone.yaml
+python3 scripts/instantiate-code-fonts.py premade-configs/duotone.yaml font-data/Recursive_VF_1.084.ttf
+python3 scripts/instantiate-code-fonts.py premade-configs/tuple.yaml font-data/Recursive_VF_1.084.ttf
+python3 scripts/instantiate-code-fonts.py premade-configs/tuple-nl.yaml font-data/Recursive_VF_1.084.ttf
 ```
 
 This argument may also be helpful if you wish to create multiple custom versions. To experiment, just duplicate the `config.yaml` with a new filename, change the `Family Name` option, and run the script pointing to that new config file.
